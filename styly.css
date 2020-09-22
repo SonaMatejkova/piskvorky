@@ -3,7 +3,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding: 30px 0 30px 0;
+  padding-top: 10px;
   margin: 0;
 }
 
@@ -19,7 +19,6 @@ body {
 }
 
 .obrazek {
-  display: block;
   width: 100%;
   border-radius: 2% 2% 0 0;
 }
