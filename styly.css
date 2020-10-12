@@ -126,3 +126,25 @@ body {
   }
 } 
 
+/*stylování hry*/
+
+.hra {
+  max-width: 80vmin;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+.menu {
+  display: flex;
+
+}
+.hraje {
+  display: inline;
+}
+.tlacitka3 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
