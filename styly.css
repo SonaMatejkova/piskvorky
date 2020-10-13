@@ -16,7 +16,7 @@ body {
   text-align: center;
   border-radius: 5px 5px 0 0;
   box-shadow: 0 1px 4px gray;
-  margin: 5px auto;
+  margin: 3px auto;
 }
 
 .obrazek {
@@ -38,7 +38,7 @@ body {
   font-family: 'Lobster', cursive;
   font-size: 45px;
   font-weight: normal;
-  margin: 20px 0 20px 0;
+  margin: 14px 0 15px 0;
 }
 
 .nadpis1 {
@@ -134,17 +134,80 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
   text-align: center;
+  margin: 0 auto;
+}
+.nadpis2 {
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
+  font-weight: normal;
+  margin: 0;
 }
 .menu {
   display: flex;
-
+  justify-content: space-between;
 }
 .hraje {
-  display: inline;
-}
-.tlacitka3 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+}
+.text {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 10px;
+  margin: 10px 0 10px 5px;
+}
+.ikona1 {
+  width: 1.3em;
+  height: 1.3em;
+  filter: invert(100%);
+  margin: 20px 0 0 5px;
+  
+}
+.tlacitka2 {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 10px 5px 10px 0;
+}
+.zpet-uvod {
+  width: 40px;
+  height: 42px;
+  background-color:  #1fcca4;
+  border-radius: 3px;
+  margin-right: 7px;
+}
+.znovu {
+  width: 40px;
+  height: 42px;
+  background-color: #0197f6;
+  border-radius: 3px;
+}
+.zpet-uvod img,
+.znovu img {
+  position: relative;
+  top: 7px;
+}
+.zpet-uvod:hover,
+.zpet-uvod:focus {
+  background-color: #1cbb96;
+}
+.znovu:hover,
+.znovu:focus {
+  background-color: #0090e9;
+}
+.mrizka {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vmin;
+  border: 1px solid #283e50;
+}
+button {
+  flex: 1 1 10%;
+  align-items: stretch;
+  border: 1px solid #283e50;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+button:hover,
+button:focus {
+  background-color:  rgba(255, 255, 255, 0.5);
 }
