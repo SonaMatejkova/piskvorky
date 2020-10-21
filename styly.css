@@ -204,13 +204,54 @@ body {
   height: 80vmin;
   border: 1px solid #283e50;
 }
-button {
+.field {
   flex: 1 1 10%;
-  align-items: stretch;
   border: 1px solid #283e50;
   background-color: rgba(255, 255, 255, 0.3);
 }
-button:hover,
-button:focus {
+.field:hover,
+.field:focus {
   background-color:  rgba(255, 255, 255, 0.5);
+}
+
+.kolecko {
+  flex: 1 1 10%;
+  border: 1px solid #283e50;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0;
+  position: relative;
+}
+.krizek {
+  flex: 1 1 10%;
+  border: 1px solid #283e50;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0;
+  position: relative;
+}
+.kolecko::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 4px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  box-sizing: content-box;
+}
+.krizek::before,
+.krizek::after {
+  content:'';
+  height: 4px;
+  display: block;
+  background-color: currentColor;
+  top: 21px;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  box-sizing: content-box;
+}
+.krizek::after {
+  transform: rotate(-45deg);
 }
