@@ -1,16 +1,22 @@
 'use strict';
 
-let hraje = 'kolecko';
+let naTahu = 'kolecko';
+
+const hraje = document.querySelector('.ikona1');
 
 const vyber = (event) => {
-  if (hraje === 'kolecko') {
+  if (naTahu === 'kolecko') {
     event.target.className = 'kolecko';
-    /*btn.setAtribute(disabled);*/
-    hraje = 'krizek';
+    hraje.src = 'obrazky/cross.svg';
+    hraje.alt = 'Křížek';
+    event.target.disabled = true;
+    naTahu = 'krizek';
   } else {
     event.target.className = 'krizek';
-    /*btn.disabled = true;*/
-    hraje = 'kolecko';
+    hraje.src = 'obrazky/circle.svg';
+    hraje.alt = 'Kolečko';
+    event.target.disabled = true;
+    naTahu = 'kolecko';
   }
 };
 
