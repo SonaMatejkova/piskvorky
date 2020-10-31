@@ -11,10 +11,10 @@ const vyber = (event) => {
     hraje.alt = 'Křížek';
     event.target.disabled = true;
     isWinningMove(event.target);
-    /*if (isWinningMove(event.target)) {
-      window.confirm(`Vyhrává ${naTahu}! Spustit novou hru?`);
+    if (isWinningMove(event.target)) {
+      window.confirm(`Vyhrává hráč s kolečkem! Spustit novou hru?`);
       location.reload();
-    }*/
+    }
     naTahu = 'krizek';
   } else {
     event.target.className = 'krizek';
@@ -22,10 +22,10 @@ const vyber = (event) => {
     hraje.alt = 'Kolečko';
     event.target.disabled = true;
     isWinningMove(event.target);
-    /*if (isWinningMove(event.target)) {
-      window.confirm(`Vyhrává ${naTahu}! Spustit novou hru?`);
+    if (isWinningMove(event.target)) {
+      window.confirm(`Vyhrává hráč s křížkem! Spustit novou hru?`);
       location.reload();
-    }*/
+    }
     naTahu = 'kolecko';
   }
 };
@@ -36,11 +36,11 @@ for (let i = 0; i < buttons.length; i ++) {
 };
 
 const gridSize = 10;
-const fields = document.querySelectorAll('.field');
+
 const getPosition = (field) => {
   let fieldIndex = 0;
-  while (fieldIndex < fields.length) {
-    if (field === fields[fieldIndex]) {
+  while (fieldIndex < buttons.length) {
+    if (field === buttons[fieldIndex]) {
       break
     }
     fieldIndex++
@@ -52,15 +52,13 @@ const getPosition = (field) => {
 };
 
 const getField = (row, column) => {
-  buttons[row * gridSize + column]
+  return buttons[row * gridSize + column]
 };
 
 const getSymbol = (field) => {
-  if (field.classList.contains('kolecko')) {
-    console.log(field.className);
+  if (field.className === 'kolecko') {
     return 'kolecko';
-  } else if (field.classList.contains('krizek')) {
-    console.log(field.className);
+  } else if (field.className === 'krizek') {
     return 'krizek';
   }
 }; 
