@@ -12,8 +12,10 @@ const vyber = (event) => {
     event.target.disabled = true;
     isWinningMove(event.target);
     if (isWinningMove(event.target)) {
+      setTimeout(() => {
       window.confirm(`Vyhrává hráč s kolečkem! Spustit novou hru?`);
       location.reload();
+      }, 100);
     }
     naTahu = 'krizek';
   } else {
@@ -23,8 +25,10 @@ const vyber = (event) => {
     event.target.disabled = true;
     isWinningMove(event.target);
     if (isWinningMove(event.target)) {
+      setTimeout(() => {
       window.confirm(`Vyhrává hráč s křížkem! Spustit novou hru?`);
       location.reload();
+      }, 100);
     }
     naTahu = 'kolecko';
   }
