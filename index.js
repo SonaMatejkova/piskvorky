@@ -1,9 +1,19 @@
 'use strict';
+//Vytvoření hracího pole
+const mrizka = () => {
+  for (let i = 0; i < 100; i++) {
+    const field = document.createElement('button');
+    field.className = 'field';
+    const mrizka = document.querySelector('.mrizka');
+    mrizka.appendChild(field);
+  }
+};
+mrizka();
 
 let naTahu = 'kolecko';
-
 const hraje = document.querySelector('.ikona1');
 
+//Funkce zajišťující hru
 const vyber = (event) => {
   if (naTahu === 'kolecko') {
     event.target.className = 'kolecko';
@@ -41,6 +51,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 const gridSize = 10;
 
+//Přiřazení indexů políčkům
 const getPosition = (field) => {
   let fieldIndex = 0;
   while (fieldIndex < buttons.length) {
@@ -55,10 +66,12 @@ const getPosition = (field) => {
   };
 };
 
+//Přiřazení políček
 const getField = (row, column) => {
   return buttons[row * gridSize + column];
 };
 
+//Rozpoznání symbolů na políčku
 const getSymbol = (field) => {
   if (field.className === 'kolecko') {
     return 'kolecko';
@@ -67,6 +80,7 @@ const getSymbol = (field) => {
   }
 };
 
+//Kontrola výher
 const winSymbols = 5;
 const isWinningMove = (field) => {
   const position = getPosition(field);

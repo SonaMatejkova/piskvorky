@@ -1,4 +1,6 @@
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
@@ -7,6 +9,9 @@ body {
   min-height: 100vh;
   background-repeat: no-repeat;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .uvod,
@@ -117,7 +122,7 @@ body {
 
 @media screen and (min-width: 800px) {
   .pravidla1 {
-    width: 670px;  
+    width: 670px;
   }
   .priklady {
     display: flex;
@@ -128,7 +133,7 @@ body {
     flex: 1 1 calc(50% - 90px);
     padding-right: 30px;
   }
-} 
+}
 
 /*stylování hry*/
 
@@ -175,7 +180,7 @@ body {
 .zpet-uvod {
   width: 40px;
   height: 42px;
-  background-color:  #1fcca4;
+  background-color: #1fcca4;
   border-radius: 3px;
   margin-right: 7px;
 }
@@ -211,7 +216,7 @@ body {
 }
 .field:hover,
 .field:focus {
-  background-color:  rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .kolecko,
 .krizek {
@@ -225,16 +230,16 @@ body {
   animation-name: size;
 }
 .kolecko {
-  background-image: url("obrazky/circle.svg");
+  background-image: url('obrazky/circle.svg');
 }
 .krizek {
-  background-image: url("obrazky/cross.svg");
+  background-image: url('obrazky/cross.svg');
 }
 @keyframes size {
   0% {
     background-size: 0%;
   }
   100% {
-    background-size: 70%
+    background-size: 70%;
   }
 }
